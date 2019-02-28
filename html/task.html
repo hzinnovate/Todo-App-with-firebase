@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Todo aap</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li onClick="logout()"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="class" style="display: none;">
+        <div class="text-center">
+            <h1 id="h1">Todo App</h1>
+            <p>now you can use TODO app for save your Tasks</p>
+        </div>
+        <br /><br />
+        <div class="container">
+            <div class="flex">
+                <div class="input-group col-lg-7 col-lg-offset-2 col-sm-9 col-sm-offset-1 col-xs-8 col-xs-offset-1">
+                    <span class="input-group-addon edit btn-info"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <input id="task" type="text" class="form-control" name="task" placeholder="Enter some task">
+                </div>
+                <button onClick="addTask()" class="btn btn-info"><span class="glyphicon glyphicon-user"></span>Add</button>
+            </div>
+            <br><br>
+            <ul id="data" class="list-group" style="min-width: 200px;">
+
+            </ul>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        window.addEventListener('load', () => { verify() });
+    </script>
+</body>
+
+</html>

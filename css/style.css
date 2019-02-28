@@ -1,0 +1,14 @@
+body{
+    background-color: #bbbbbb;
+}
+
+.flex{
+    display:flex;
+    flex-direction:row;
+}
+
+.edit{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
